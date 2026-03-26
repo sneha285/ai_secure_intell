@@ -22,11 +22,27 @@ This repository provides a modular backend (FastAPI) and frontend (React / Vite)
 - Git (optional)
 
 ---
+## Frontend Setup
 
+The frontend is a React + Vite application that provides a user-friendly interface for the AI Secure Data Intelligence Platform.
+
+### Prerequisites
+
+- Node.js 18+ (or latest LTS)
+- npm (bundled with Node.js)
+
+### Installation
+
+1. Navigate to the frontend directory:
+   ```powershell
+   cd c:\Users\user_name\Desktop\ai_secure_intell\frontend
+   npm run build
+   npm run preview
+   
 ## Backend Setup
 
 1. Open terminal:
-   - `cd c:\Users\SNEHA\Desktop\ai_secure_intell\backend`
+   - `cd c:\Users\user_name\Desktop\ai_secure_intell\backend`
 
 2. Install dependencies:
    - `pip install -r requirements.txt`
