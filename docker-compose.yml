@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - CORS_ALLOW_ORIGINS=*
+      # - OPENAI_API_KEY=...
+

@@ -1,0 +1,279 @@
+:root {
+  --bg: #0b1220;
+  --panel: #0f1b33;
+  --text: #e7eefc;
+  --muted: #95a7c7;
+  --border: rgba(255, 255, 255, 0.12);
+  --primary: #4c8dff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.app {
+  padding: 20px;
+}
+
+.header__title {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.header__subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.section__title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 100%;
+  height: 240px;
+  resize: vertical;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text);
+  padding: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text);
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn--primary {
+  border-color: rgba(76, 141, 255, 0.65);
+  background: rgba(76, 141, 255, 0.22);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 10px;
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.panel__title {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.panel__summary {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.insights {
+  display: grid;
+  gap: 8px;
+}
+
+.insight {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.riskBadge {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.riskBadge__top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.riskBadge__label {
+  font-weight: 800;
+}
+
+.riskBadge__value {
+  font-weight: 800;
+}
+
+.riskBadge__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.logViewer {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.logViewer__title {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.logViewer__lines {
+  max-height: 520px;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.logLine {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logLine:last-child {
+  border-bottom: none;
+}
+
+.logLine__ln {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.logLine__text {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.logLine--critical {
+  background: rgba(183, 28, 28, 0.22);
+}
+
+.logLine--high {
+  background: rgba(216, 67, 21, 0.18);
+}
+
+.logLine--medium {
+  background: rgba(249, 168, 37, 0.18);
+}
+
+.logLine--low {
+  background: rgba(46, 125, 50, 0.12);
+}
+
+.dropzone {
+  border: 1px dashed rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+.dropzone--over {
+  border-color: rgba(76, 141, 255, 0.85);
+  background: rgba(76, 141, 255, 0.10);
+}
+
+.dropzone__title {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.dropzone__hint {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.dropzone__button {
+  display: inline-block;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
